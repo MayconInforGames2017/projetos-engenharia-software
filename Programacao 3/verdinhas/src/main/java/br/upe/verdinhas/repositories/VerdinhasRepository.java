@@ -1,9 +1,9 @@
 package br.upe.verdinhas.repositories;
 
-import org.springframework.data.repository.Repository;
+import org.springframework.data.repository.CrudRepository;
 
 import br.upe.verdinhas.model.Verdinhas;
 
-public interface VerdinhasRepository <T, ID> extends Repository<Verdinhas, Long>{
+public interface VerdinhasRepository extends CrudRepository<Verdinhas, Long>{
 
 }
