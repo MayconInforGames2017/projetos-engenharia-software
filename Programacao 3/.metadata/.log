@@ -1866,3 +1866,60 @@ java.util.concurrent.TimeoutException
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-04-03 13:01:31.726
 !MESSAGE executing callback sts4.classpath.RyHwjLDJ SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-04-03 13:18:43.856
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.RyHwjLDJ
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-04-03 13:18:44.739
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.RyHwjLDJ
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-04-03 13:18:44.761
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-04-03 13:18:44.785
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.RyHwjLDJ => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-04-03 13:19:08.358
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-04-03 13:19:08.372
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@21329544[org.springframework.tooling.boot.ls:1.24.0.202012131915(id=578)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-04-03 13:19:08.383
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-04-03 13:19:13.299
+!MESSAGE Boot LS startup time from start to initialized: 4905ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-04-03 13:19:13.450
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.epnXuQXnisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-04-03 13:19:13.462
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-04-03 13:19:13.473
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-04-03 13:19:13.488
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-04-03 13:19:13.501
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-04-03 13:19:13.514
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.epnXuQXn => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-04-03 13:19:13.529
+!MESSAGE classpath=72 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-04-03 13:19:13.546
+!MESSAGE buffering callback sts4.classpath.epnXuQXn servlet-aula1 false 72
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-04-03 13:19:13.555
+!MESSAGE executing callback sts4.classpath.epnXuQXn 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-04-03 13:19:13.604
+!MESSAGE executing callback sts4.classpath.epnXuQXn SUCCESS [done]
+
+!ENTRY org.eclipse.ui 2 2 2021-04-03 13:19:18.016
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
