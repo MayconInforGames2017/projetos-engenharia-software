@@ -4,6 +4,8 @@ import javax.servlet.http.HttpServlet;
 
 public class CarinhaServlet extends HttpServlet {
 
-	private static final long serialVersionUID = -3350554087690905074L;
+	private static final long serialVersionUID = 1L;
 
+	
+	
 }
