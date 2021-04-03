@@ -9,5 +9,8 @@ public class Verdinhas {
 	private String genero;
 	private String nomePopular;
 	private LocalDate dataAquisicao;
-	
+	private Local local;
+	private boolean visivel;
+	private Caracteristicas caracteristicas;
+
 }
