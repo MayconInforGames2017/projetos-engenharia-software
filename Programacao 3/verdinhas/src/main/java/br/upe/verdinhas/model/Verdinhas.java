@@ -2,8 +2,16 @@ package br.upe.verdinhas.model;
 
 import java.time.LocalDate;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Verdinhas {
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	private String especie;
 	private String genero;
@@ -12,7 +20,7 @@ public class Verdinhas {
 	private Local local;
 	private boolean visivel;
 	private Caracteristicas caracteristicas;
-	
+
 	public Long getId() {
 		return id;
 	}
