@@ -9,7 +9,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
 import javax.persistence.OneToOne;
 
 @Entity
@@ -32,6 +31,16 @@ public class Verdinhas {
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "id_caracteristicas", referencedColumnName = "id_caracteristicas")
 	private Caracteristicas caracteristicas;
+
+	private byte[] fotos;
+	
+	public byte[] getFotos() {
+		return fotos;
+	}
+
+	public void setFotos(byte[] fotos) {
+		this.fotos = fotos;
+	}
 
 	public Long getId() {
 		return id;

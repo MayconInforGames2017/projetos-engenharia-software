@@ -21,7 +21,16 @@ public class Caracteristicas {
 	private String corFlores;
 	private String frutos;
 	private String raizes;
-	
+	private String tipoPropagacao;
+
+	public String getTipoPropagacao() {
+		return tipoPropagacao;
+	}
+
+	public void setTipoPropagacao(String tipoPropagacao) {
+		this.tipoPropagacao = tipoPropagacao;
+	}
+
 	public Verdinhas getVerdinhas() {
 		return verdinhas;
 	}

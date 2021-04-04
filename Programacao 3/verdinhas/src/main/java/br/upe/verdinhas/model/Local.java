@@ -18,7 +18,43 @@ public class Local {
 	private String descricao;
 	private boolean cobertura;
 	private String umidade;
-	
+	private String tipoIncidenciaSolar;
+	private String tipoExposicaoSolar;
+	private String tipoVento;
+	private byte[] fotos;
+
+	public String getTipoIncidenciaSolar() {
+		return tipoIncidenciaSolar;
+	}
+
+	public void setTipoIncidenciaSolar(String tipoIncidenciaSolar) {
+		this.tipoIncidenciaSolar = tipoIncidenciaSolar;
+	}
+
+	public String getTipoExposicaoSolar() {
+		return tipoExposicaoSolar;
+	}
+
+	public void setTipoExposicaoSolar(String tipoExposicaoSolar) {
+		this.tipoExposicaoSolar = tipoExposicaoSolar;
+	}
+
+	public String getTipoVento() {
+		return tipoVento;
+	}
+
+	public void setTipoVento(String tipoVento) {
+		this.tipoVento = tipoVento;
+	}
+
+	public byte[] getFotos() {
+		return fotos;
+	}
+
+	public void setFotos(byte[] fotos) {
+		this.fotos = fotos;
+	}
+
 	@OneToOne(mappedBy = "local")
 	private Verdinhas verdinhas;
 
