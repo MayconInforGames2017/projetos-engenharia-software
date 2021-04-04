@@ -2,13 +2,13 @@ package br.upe.verdinhas.catalogo.model;
 
 import java.time.LocalDate;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 
 @Entity
@@ -16,7 +16,7 @@ public class Verdinhas {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name = "id_verdinhas")
+	@Column(name = "verdinhas_id")
 	private Long id;
 	private String nome;
 	private String especie;
@@ -24,13 +24,13 @@ public class Verdinhas {
 	private String nomePopular;
 	private LocalDate dataAquisicao;
 
-	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "id_local", referencedColumnName = "id_local")
+	@ManyToOne
+	@JoinColumn(name = "local_id")
 	private Local local;
+	
 	private boolean visivel;
 
-	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "id_caracteristicas", referencedColumnName = "id_caracteristicas")
+	@OneToOne(mappedBy = "verdinhas")
 	private Caracteristicas caracteristicas;
 
 	private byte[] fotos;

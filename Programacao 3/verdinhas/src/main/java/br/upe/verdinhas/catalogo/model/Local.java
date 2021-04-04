@@ -1,18 +1,21 @@
 package br.upe.verdinhas.catalogo.model;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Local {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name = "id_local")
+	@Column(name = "local_id")
 	private Long id;
 	private String nomeLocal;
 	private String descricao;
@@ -22,6 +25,18 @@ public class Local {
 	private String tipoExposicaoSolar;
 	private String tipoVento;
 	private byte[] fotos;
+
+	@OneToMany
+	@JoinColumn(name = "local_id")
+	private List<Verdinhas> verdinhas;
+
+	public List<Verdinhas> getVerdinhas() {
+		return verdinhas;
+	}
+
+	public void setVerdinhas(List<Verdinhas> verdinhas) {
+		this.verdinhas = verdinhas;
+	}
 
 	public String getTipoIncidenciaSolar() {
 		return tipoIncidenciaSolar;
@@ -53,17 +68,6 @@ public class Local {
 
 	public void setFotos(byte[] fotos) {
 		this.fotos = fotos;
-	}
-
-	@OneToOne(mappedBy = "local")
-	private Verdinhas verdinhas;
-
-	public Verdinhas getVerdinhas() {
-		return verdinhas;
-	}
-
-	public void setVerdinhas(Verdinhas verdinhas) {
-		this.verdinhas = verdinhas;
 	}
 
 	public Long getId() {
