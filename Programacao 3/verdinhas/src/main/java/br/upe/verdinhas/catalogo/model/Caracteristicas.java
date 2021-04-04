@@ -2,11 +2,15 @@ package br.upe.verdinhas.catalogo.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
+
+import br.upe.verdinhas.catalogo.enums.TipoPropagacao;
 
 @Entity
 public class Caracteristicas {
@@ -22,19 +26,13 @@ public class Caracteristicas {
 	private String corFlores;
 	private String frutos;
 	private String raizes;
-	private String tipoPropagacao;
+
+	@Enumerated(EnumType.STRING)
+	TipoPropagacao tipo;
 
 	@OneToOne
 	@JoinColumn(name = "verdinhas_id")
 	private Verdinhas verdinhas;
-
-	public String getTipoPropagacao() {
-		return tipoPropagacao;
-	}
-
-	public void setTipoPropagacao(String tipoPropagacao) {
-		this.tipoPropagacao = tipoPropagacao;
-	}
 
 	public Verdinhas getVerdinhas() {
 		return verdinhas;
