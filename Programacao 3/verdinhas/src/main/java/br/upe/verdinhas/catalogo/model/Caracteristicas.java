@@ -1,4 +1,4 @@
-package br.upe.verdinhas.model;
+package br.upe.verdinhas.catalogo.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -17,11 +17,14 @@ public class Caracteristicas {
 	private String folhagem;
 	private String corFolhagem;
 	private String arbustos;
-	private String flore;
+	private String flores;
 	private String corFlores;
 	private String frutos;
 	private String raizes;
 	private String tipoPropagacao;
+
+	@OneToOne(mappedBy = "caracteristicas")
+	private Verdinhas verdinhas;
 
 	public String getTipoPropagacao() {
 		return tipoPropagacao;
@@ -38,9 +41,6 @@ public class Caracteristicas {
 	public void setVerdinhas(Verdinhas verdinhas) {
 		this.verdinhas = verdinhas;
 	}
-
-	@OneToOne(mappedBy = "caracteristicas")
-	private Verdinhas verdinhas;
 
 	public long getId() {
 		return id;
@@ -74,12 +74,12 @@ public class Caracteristicas {
 		this.arbustos = arbustos;
 	}
 
-	public String getFlore() {
-		return flore;
+	public String getFlores() {
+		return flores;
 	}
 
-	public void setFlore(String flore) {
-		this.flore = flore;
+	public void setFlores(String flores) {
+		this.flores = flores;
 	}
 
 	public String getCorFlores() {

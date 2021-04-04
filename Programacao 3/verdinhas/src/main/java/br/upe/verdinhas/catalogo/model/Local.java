@@ -1,4 +1,4 @@
-package br.upe.verdinhas.model;
+package br.upe.verdinhas.catalogo.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

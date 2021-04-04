@@ -1,4 +1,4 @@
-package br.upe.verdinhas.model;
+package br.upe.verdinhas.catalogo.model;
 
 import java.time.LocalDate;
 
@@ -18,22 +18,31 @@ public class Verdinhas {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "id_verdinhas")
 	private Long id;
+	private String nome;
 	private String especie;
 	private String genero;
 	private String nomePopular;
 	private LocalDate dataAquisicao;
-	
+
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "id_local", referencedColumnName = "id_local")
 	private Local local;
 	private boolean visivel;
-	
+
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "id_caracteristicas", referencedColumnName = "id_caracteristicas")
 	private Caracteristicas caracteristicas;
 
 	private byte[] fotos;
-	
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
 	public byte[] getFotos() {
 		return fotos;
 	}
