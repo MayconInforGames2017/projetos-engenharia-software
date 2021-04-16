@@ -1,5 +1,6 @@
 package br.upe.verdinhas.catalogo.model;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
 import javax.persistence.Column;
@@ -12,7 +13,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 
 @Entity
-public class Verdinhas {
+public class Verdinhas implements Serializable {
+	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -27,7 +29,7 @@ public class Verdinhas {
 	@ManyToOne
 	@JoinColumn(name = "local_id")
 	private Local local;
-	
+
 	private boolean visivel;
 
 	@OneToOne(mappedBy = "verdinhas")
