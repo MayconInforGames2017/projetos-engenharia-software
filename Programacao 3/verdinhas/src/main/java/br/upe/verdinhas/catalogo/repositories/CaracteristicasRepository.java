@@ -1,4 +1,4 @@
-package br.upe.verdinhas.repositories;
+package br.upe.verdinhas.catalogo.repositories;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
