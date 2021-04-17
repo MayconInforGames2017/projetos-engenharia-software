@@ -22,6 +22,7 @@ public class Caracteristicas implements Serializable {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "id_caracteristicas")
 	private long id;
+	
 	private String folhagem;
 	private String corFolhagem;
 	private String arbustos;
@@ -33,8 +34,7 @@ public class Caracteristicas implements Serializable {
 	@Enumerated(EnumType.STRING)
 	TipoPropagacao tipo;
 
-	@OneToOne
-	@JoinColumn(name = "verdinhas_id")
+	@OneToOne(mappedBy = "caracteristicas")
 	private Verdinhas verdinhas;
 
 	public Verdinhas getVerdinhas() {
