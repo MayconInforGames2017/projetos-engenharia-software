@@ -12,6 +12,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
+import br.upe.verdinhas.catalogo.enums.TipoExposicaoSolar;
+import br.upe.verdinhas.catalogo.enums.TipoIncidenciaSolar;
+import br.upe.verdinhas.catalogo.enums.TipoVento;
+
 @Entity
 public class Local implements Serializable {
 	private static final long serialVersionUID = 1L;
@@ -20,24 +24,24 @@ public class Local implements Serializable {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "id_local")
 	private Long id;
-	
+
 	private String nomeLocal;
 	private String descricao;
 	private boolean cobertura;
 	private String umidade;
-	
+
 	@OneToMany(mappedBy = "local")
 	private List<Verdinhas> verdinhas;
-	
+
 	@Enumerated(EnumType.STRING)
-	private String tipoIncidenciaSolar;
-	
+	private TipoIncidenciaSolar tipoIncidenciaSolar;
+
 	@Enumerated(EnumType.STRING)
-	private String tipoExposicaoSolar;
-	
+	private TipoExposicaoSolar tipoExposicaoSolar;
+
 	@Enumerated(EnumType.STRING)
-	private String tipoVento;
-	
+	private TipoVento tipoVento;
+
 	private byte[] fotos;
 
 	public List<Verdinhas> getVerdinhas() {
@@ -46,30 +50,6 @@ public class Local implements Serializable {
 
 	public void setVerdinhas(List<Verdinhas> verdinhas) {
 		this.verdinhas = verdinhas;
-	}
-
-	public String getTipoIncidenciaSolar() {
-		return tipoIncidenciaSolar;
-	}
-
-	public void setTipoIncidenciaSolar(String tipoIncidenciaSolar) {
-		this.tipoIncidenciaSolar = tipoIncidenciaSolar;
-	}
-
-	public String getTipoExposicaoSolar() {
-		return tipoExposicaoSolar;
-	}
-
-	public void setTipoExposicaoSolar(String tipoExposicaoSolar) {
-		this.tipoExposicaoSolar = tipoExposicaoSolar;
-	}
-
-	public String getTipoVento() {
-		return tipoVento;
-	}
-
-	public void setTipoVento(String tipoVento) {
-		this.tipoVento = tipoVento;
 	}
 
 	public byte[] getFotos() {
@@ -118,6 +98,30 @@ public class Local implements Serializable {
 
 	public void setUmidade(String umidade) {
 		this.umidade = umidade;
+	}
+
+	public TipoIncidenciaSolar getTipoIncidenciaSolar() {
+		return tipoIncidenciaSolar;
+	}
+
+	public void setTipoIncidenciaSolar(TipoIncidenciaSolar tipoIncidenciaSolar) {
+		this.tipoIncidenciaSolar = tipoIncidenciaSolar;
+	}
+
+	public TipoExposicaoSolar getTipoExposicaoSolar() {
+		return tipoExposicaoSolar;
+	}
+
+	public void setTipoExposicaoSolar(TipoExposicaoSolar tipoExposicaoSolar) {
+		this.tipoExposicaoSolar = tipoExposicaoSolar;
+	}
+
+	public TipoVento getTipoVento() {
+		return tipoVento;
+	}
+
+	public void setTipoVento(TipoVento tipoVento) {
+		this.tipoVento = tipoVento;
 	}
 
 }
