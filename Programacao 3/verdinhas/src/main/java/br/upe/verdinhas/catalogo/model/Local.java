@@ -5,6 +5,8 @@ import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -17,20 +19,27 @@ public class Local implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name = "local_id")
+	@Column(name = "id_local")
 	private Long id;
+	
 	private String nomeLocal;
 	private String descricao;
 	private boolean cobertura;
 	private String umidade;
-	private String tipoIncidenciaSolar;
-	private String tipoExposicaoSolar;
-	private String tipoVento;
-	private byte[] fotos;
-
-	@OneToMany
-	@JoinColumn(name = "local_id")
+	
+	@OneToMany(mappedBy = "local")
 	private List<Verdinhas> verdinhas;
+	
+	@Enumerated(EnumType.STRING)
+	private String tipoIncidenciaSolar;
+	
+	@Enumerated(EnumType.STRING)
+	private String tipoExposicaoSolar;
+	
+	@Enumerated(EnumType.STRING)
+	private String tipoVento;
+	
+	private byte[] fotos;
 
 	public List<Verdinhas> getVerdinhas() {
 		return verdinhas;
