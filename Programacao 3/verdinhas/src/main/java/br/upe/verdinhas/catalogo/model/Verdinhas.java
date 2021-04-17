@@ -3,6 +3,7 @@ package br.upe.verdinhas.catalogo.model;
 import java.io.Serializable;
 import java.time.LocalDate;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,6 +12,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
+import javax.persistence.Transient;
 
 @Entity
 public class Verdinhas implements Serializable {
@@ -20,22 +22,38 @@ public class Verdinhas implements Serializable {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "verdinhas_id")
 	private Long id;
+
 	private String nome;
 	private String especie;
 	private String genero;
 	private String nomePopular;
-	private LocalDate dataAquisicao;
 
-	@ManyToOne
-	@JoinColumn(name = "local_id")
-	private Local local;
+	@Transient
+	private LocalDate dataAquisicao = LocalDate.now();
+
+	private byte[] fotos;
 
 	private boolean visivel;
 
-	@OneToOne(mappedBy = "verdinhas")
+	@ManyToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "id_local")
+	private Local local;
+
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "id_caracteristicas")
 	private Caracteristicas caracteristicas;
 
-	private byte[] fotos;
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "id_necessidades")
+	private Necessidades necessidades;
+
+	public Necessidades getNecessidades() {
+		return necessidades;
+	}
+
+	public void setNecessidades(Necessidades necessidades) {
+		this.necessidades = necessidades;
+	}
 
 	public String getNome() {
 		return nome;
