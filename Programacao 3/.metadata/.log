@@ -9439,3 +9439,54 @@ java.util.concurrent.TimeoutException
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-01 21:04:32.119
 !MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.KwhsQHFw => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-01 21:07:03.320
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-01 21:07:03.408
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@a90447f[org.springframework.tooling.boot.ls:1.24.0.202012131915(id=578)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-01 21:07:03.409
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-01 21:07:08.962
+!MESSAGE Boot LS startup time from start to initialized: 5550ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-01 21:07:09.118
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.owPLOkbIisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-01 21:07:09.119
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-01 21:07:09.120
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-01 21:07:09.120
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-01 21:07:09.121
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-01 21:07:09.121
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.owPLOkbI => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-01 21:07:09.133
+!MESSAGE classpath=94 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-01 21:07:09.144
+!MESSAGE buffering callback sts4.classpath.owPLOkbI verdinhas false 94
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-01 21:07:09.145
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-01 21:07:09.154
+!MESSAGE classpath=72 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-01 21:07:09.162
+!MESSAGE buffering callback sts4.classpath.owPLOkbI servlet-aula1 false 72
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-01 21:07:09.163
+!MESSAGE executing callback sts4.classpath.owPLOkbI 2 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-01 21:07:09.250
+!MESSAGE executing callback sts4.classpath.owPLOkbI SUCCESS [done]
